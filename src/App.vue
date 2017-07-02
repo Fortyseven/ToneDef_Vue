@@ -1,32 +1,37 @@
 <template>
-  <div id="app">
-    <DTMFPanel></DTMFPanel>
+  <div class="app">
+    <links></links>
+    <div class="panel">
+      <DTMFPanel></DTMFPanel>
+    </div>
   </div>
 </template>
 
 <!-- --------------------------------------------------- -->
 
 <script>
-  import DTMFPanel from "./DTMFPanel.vue";
-  
-  import Vue from 'vue';
-  import VueSimpleTouch from './utils/vue-simple-touch.js';
- 
-  Vue.use(VueSimpleTouch);
+import DTMFPanel from "./DTMFPanel.vue";
 
-  export default {
-    name: 'app',
-    data() {
-      return {
-      }
-    },
-    components: {
-      DTMFPanel
+export default {
+  name: 'app',
+  data() {
+    return {
     }
+  },
+  components: {
+    DTMFPanel
   }
+}
 </script>
 
 <!-- --------------------------------------------------- -->
 
-<!-- style lang="scss">
-</style -->
+<style lang="scss" scoped>
+.app {
+  flex-direction: column;
+}
+
+.panel {
+  height: 100%;
+}
+</style>

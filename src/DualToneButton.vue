@@ -42,23 +42,21 @@ export default {
 
 <style lang="scss" scoped>
 div .button {
-    flex: 1 1 33.3vw;
+    flex: 1 1 auto;
 
     background: #d5cea6;
-    background: -moz-linear-gradient(top, #d5cea6 0%, #c9c190 40%, #b7ad70 100%);
-    background: -webkit-linear-gradient(top, #d5cea6 0%, #c9c190 40%, #b7ad70 100%);
     background: linear-gradient(to bottom, white 0%, #c9c190 10%, gold 100%);
 
     border: 4px inset gold;
     margin: 0.25em;
     user-select: none;
     cursor: pointer;
+    position: relative;
 
     .label {
         position: relative;
         bottom: -50%;
         color: black;
-        vertical-align: middle;
         text-align: center;
         font-size: 36pt;
         font-weight: bold;

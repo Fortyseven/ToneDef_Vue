@@ -30,40 +30,39 @@
 <!-- --------------------------------------------------- -->
 
 <script>
-    import DualToneButton from "./DualToneButton.vue";
+import DualToneButton from "./DualToneButton.vue";
 
-    export default {
-        name: "DTMFPanel",
-        data() {
-            return {
-                audio_context: null
-            }
-        },
-        components: {
-            DualToneButton
-        },
-        created() {
-            window.AudioContext = window.AudioContext || window.webkitAudioContext;
-            this.audio_context = new AudioContext();
+export default {
+    name: "DTMFPanel",
+    data() {
+        return {
+            audio_context: null
         }
-    } 
+    },
+    components: {
+        DualToneButton
+    },
+    created() {
+        window.AudioContext = window.AudioContext || window.webkitAudioContext;
+        this.audio_context = new AudioContext();
+    }
+} 
 </script>
 
 <!-- --------------------------------------------------- -->
 
-<style scoped>
-    #DTMFPanel {
-        display: flex;
-        flex-direction: column;
-        background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(#444));
-        background-image: -webkit-linear-gradient(top, black, #444);
-        image: -moz-linear -gradient(top, black, #444);
-        background-image: linear-gradient(to bottom, black, #444);
-        height: 100vh;
-    }
-
+<style lang="scss">
+#DTMFPanel {
+    display: flex;
+    flex-direction: column;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(#444));
+    background-image: -webkit-linear-gradient(top, black, #444);
+    image: -moz-linear -gradient(top, black, #444);
+    background-image: linear-gradient(to bottom, black, #444);
+    height: 100%;
     .pad-row {
-        flex: 1 1 33%;
+        flex: 0 0 25%;
         display: flex;
     }
+}
 </style>
