@@ -49,6 +49,7 @@ var vueSimpleTouch = {
                     if (typeof binding.value[1] === 'function') {
                         $el.addEventListener('touchend', onPressedEnd);
                         $el.addEventListener('mouseup', onPressedEnd);
+                        $el.addEventListener('mouseleave', onPressedEnd);
                     } else {
                         throw "Pressed end object is not a function";
                     }
