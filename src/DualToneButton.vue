@@ -51,6 +51,8 @@ div .button {
 
     border: 4px inset gold;
     margin: 0.25em;
+    user-select: none;
+    cursor: pointer;
 
     .label {
         position: relative;
