@@ -14,17 +14,10 @@
  
   Vue.use(VueSimpleTouch);
 
-  // import VueTouch from 'vue-touch';
-
-  // Vue.use(VueTouch, {
-  //     name: 'v-touch'
-  // });
-
   export default {
     name: 'app',
     data() {
       return {
-        msg: 'Welcome to Your Vue.js App'
       }
     },
     components: {
@@ -35,6 +28,5 @@
 
 <!-- --------------------------------------------------- -->
 
-<style lang="scss">
-
-</style>
+<!-- style lang="scss">
+</style -->
