@@ -1,1 +1,5 @@
+.gitattributes diff
 *.vue diff
+*.js diff
+*.html diff
+*.json diff
