@@ -1,28 +1,28 @@
 <template>
     <div id="DTMFPanel">
         <div class="pad-row row1">
-            <ToneButton freq1="1209" freq2="697" name="1" :context="audio_context"></ToneButton>
-            <ToneButton freq1="1336" freq2="697" name="2" :context="audio_context"></ToneButton>
-            <ToneButton freq1="1477" freq2="697" name="3" :context="audio_context"></ToneButton>
-            <ToneButton freq1="1633" freq2="697" name="A" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1209" freq2="697" :context="audio_context">1</ToneButton>
+            <ToneButton freq1="1336" freq2="697" :context="audio_context">2</ToneButton>
+            <ToneButton freq1="1477" freq2="697" :context="audio_context">3</ToneButton>
+            <ToneButton freq1="1633" freq2="697" :context="audio_context">A</ToneButton>
         </div>
         <div class="pad-row row2">
-            <ToneButton freq1="1209" freq2="770" name="4" :context="audio_context"></ToneButton>
-            <ToneButton freq1="1336" freq2="770" name="5" :context="audio_context"></ToneButton>
-            <ToneButton freq1="1477" freq2="770" name="6" :context="audio_context"></ToneButton>
-            <ToneButton freq1="1633" freq2="770" name="B" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1209" freq2="770" :context="audio_context">4</ToneButton>
+            <ToneButton freq1="1336" freq2="770" :context="audio_context">5</ToneButton>
+            <ToneButton freq1="1477" freq2="770" :context="audio_context">6</ToneButton>
+            <ToneButton freq1="1633" freq2="770" :context="audio_context">B</ToneButton>
         </div>
         <div class="pad-row row3">
-            <ToneButton freq1="1209" freq2="852" name="7" :context="audio_context"></ToneButton>
-            <ToneButton freq1="1336" freq2="852" name="8" :context="audio_context"></ToneButton>
-            <ToneButton freq1="1477" freq2="852" name="9" :context="audio_context"></ToneButton>
-            <ToneButton freq1="1633" freq2="852" name="C" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1209" freq2="852" :context="audio_context">7</ToneButton>
+            <ToneButton freq1="1336" freq2="852" :context="audio_context">8</ToneButton>
+            <ToneButton freq1="1477" freq2="852" :context="audio_context">9</ToneButton>
+            <ToneButton freq1="1633" freq2="852" :context="audio_context">C</ToneButton>
         </div>
         <div class="pad-row row4">
-            <ToneButton freq1="1209" freq2="941" name="*" :context="audio_context"></ToneButton>
-            <ToneButton freq1="1336" freq2="941" name="0" :context="audio_context"></ToneButton>
-            <ToneButton freq1="1477" freq2="941" name="#" :context="audio_context"></ToneButton>
-            <ToneButton freq1="1633" freq2="941" name="D" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1209" freq2="941" :context="audio_context">*</ToneButton>
+            <ToneButton freq1="1336" freq2="941" :context="audio_context">0</ToneButton>
+            <ToneButton freq1="1477" freq2="941" :context="audio_context">#</ToneButton>
+            <ToneButton freq1="1633" freq2="941" :context="audio_context">D</ToneButton>
         </div>
     </div>
 </template>
@@ -46,6 +46,7 @@ export default {
         ToneButton
     },
     created() {
+        console.warn("created");
         window.AudioContext = window.AudioContext || window.webkitAudioContext;
         this.audio_context = new AudioContext();
     },

@@ -1,7 +1,7 @@
 <template>
     <div class="button" :class="{ pressed : isPlaying }" v-touch="[playerStart, playerStop]">
         <div class="label">
-            {{name}}
+            <slot></slot>
         </div>
     </div>
 </template>
