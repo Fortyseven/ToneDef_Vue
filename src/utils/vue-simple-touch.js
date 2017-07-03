@@ -16,6 +16,7 @@
 var vueSimpleTouch = {
     install(Vue, options) {
         var onPressedStart = function(el) {
+            this.$$isPressed = true;
             if (this.$$onlyTouchStart) {
                 this.$$binding.value(el, this);
             } else {
@@ -24,7 +25,10 @@ var vueSimpleTouch = {
         }
 
         var onPressedEnd = function(el) {
-            this.$$binding.value[1](el, this);
+            if (this.$$isPressed) {
+                this.$$binding.value[1](el, this);
+            }
+            this.$$isPressed = false;
         }
 
         Vue.directive('touch', {
