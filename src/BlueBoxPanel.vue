@@ -48,12 +48,20 @@ export default {
 <!-- --------------------------------------------------- -->
 
 <style lang="scss" >
+@font-face { 
+    font-family: 'Bell'; 
+    src: url('assets/fonts/BellGothicStd-Black.woff') format("woff"),
+         url('assets/fonts/BellGothicStd-Black.ttf') format("ttf");
+}
+
 #BlueBoxPanel {
     display: flex;
     flex-direction: column;
     background: #4289ff;
     width: 100%;
     height: 100%;
+    font-family: "Bell";    
+    
     .pad-row {
         flex: 1 1 auto;
         display: flex;
