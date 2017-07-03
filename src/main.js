@@ -1,3 +1,5 @@
+require('./assets/style/style.scss');
+
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueSimpleTouch from './utils/vue-simple-touch.js';

@@ -1,0 +1,41 @@
+html,
+body {
+    background: black;
+    color: cyan;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body,
+.app,
+#Main {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#Main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/** DESKTOP **/
+
+@media (min-width:768px) {
+    body {
+        width: 40vw;
+        min-width: 512px;
+        max-width: 800px;
+        height: 70vh;
+        min-height: 480px;
+        margin: auto;
+    }
+    .app,
+    #Main {
+        width: 100%;
+        height: 100%;
+    }
+}
