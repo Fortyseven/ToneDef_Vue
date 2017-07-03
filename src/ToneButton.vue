@@ -12,7 +12,7 @@
 import DualTonePlayer from "./DualTonePlayer";
 
 export default {
-    name: "DualToneButton",
+    name: "ToneButton",
     props: [
         'freq1', 'freq2', 'duration', 'name', 'context'
     ],
@@ -46,12 +46,12 @@ div .button {
 
     background: white;
 
-    border: 4px inset gold;
-    margin: 0.25em;
+    border: 4px solid rgba(0,0,0,0.05);
+    margin: 0.45em;
     user-select: none;
     cursor: pointer;
     position: relative;
-    box-shadow: 0.2em 0.2em 9px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0.2em 0.2em 9px 1px rgba(0, 0, 0, 0.75);
 
     .label {
         position: relative;
@@ -67,7 +67,7 @@ div .button {
     position: relative;
     &.pressed {
         opacity: 0.75;
-        top: 1em;
+        top: 0.25em;
     }
 }
 </style>

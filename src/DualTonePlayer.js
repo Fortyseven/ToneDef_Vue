@@ -17,18 +17,24 @@ export default class DualTonePlayer {
         console.info("playing " + this.name);
 
         this.freq1osc = this.createOsc(this.freq1);
-        this.freq2osc = this.createOsc(this.freq2);
+        if (this.freq2) {
+            this.freq2osc = this.createOsc(this.freq2);
+        }
 
 
         this.freq1osc.start(0);
-        this.freq2osc.start(0);
+        if (this.freq2) {
+            this.freq2osc.start(0);
+        }
     }
 
     stopPlaying() {
         console.info("stopping " + this.name);
         if (this.freq1osc) {
             this.freq1osc.stop(0);
-            this.freq2osc.stop(0);
+            if (this.freq2osc) {
+                this.freq2osc.stop(0);
+            }
         }
     }
 

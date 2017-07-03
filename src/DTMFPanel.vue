@@ -1,28 +1,28 @@
 <template>
     <div id="DTMFPanel">
         <div class="pad-row row1">
-            <DualToneButton freq1="1209" freq2="697" name="1" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1336" freq2="697" name="2" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1477" freq2="697" name="3" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1633" freq2="697" name="A" :context="audio_context"></DualToneButton>
+            <ToneButton freq1="1209" freq2="697" name="1" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1336" freq2="697" name="2" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1477" freq2="697" name="3" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1633" freq2="697" name="A" :context="audio_context"></ToneButton>
         </div>
         <div class="pad-row row2">
-            <DualToneButton freq1="1209" freq2="770" name="4" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1336" freq2="770" name="5" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1477" freq2="770" name="6" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1633" freq2="770" name="B" :context="audio_context"></DualToneButton>
+            <ToneButton freq1="1209" freq2="770" name="4" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1336" freq2="770" name="5" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1477" freq2="770" name="6" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1633" freq2="770" name="B" :context="audio_context"></ToneButton>
         </div>
         <div class="pad-row row3">
-            <DualToneButton freq1="1209" freq2="852" name="7" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1336" freq2="852" name="8" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1477" freq2="852" name="9" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1633" freq2="852" name="C" :context="audio_context"></DualToneButton>
+            <ToneButton freq1="1209" freq2="852" name="7" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1336" freq2="852" name="8" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1477" freq2="852" name="9" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1633" freq2="852" name="C" :context="audio_context"></ToneButton>
         </div>
         <div class="pad-row row4">
-            <DualToneButton freq1="1209" freq2="941" name="*" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1336" freq2="941" name="0" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1477" freq2="941" name="#" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1633" freq2="941" name="D" :context="audio_context"></DualToneButton>
+            <ToneButton freq1="1209" freq2="941" name="*" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1336" freq2="941" name="0" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1477" freq2="941" name="#" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1633" freq2="941" name="D" :context="audio_context"></ToneButton>
         </div>
     </div>
 </template>
@@ -33,7 +33,7 @@
 require('./assets/fonts/BellGothicStd-Black.woff');
 require('./assets/fonts/BellGothicStd-Black.ttf');
 
-import DualToneButton from "./DualToneButton.vue";
+import ToneButton from "./ToneButton.vue";
 
 export default {
     name: "DTMFPanel",
@@ -43,7 +43,7 @@ export default {
         }
     },
     components: {
-        DualToneButton
+        ToneButton
     },
     created() {
         window.AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -76,7 +76,7 @@ export default {
         .button {
             background: linear-gradient(to bottom, #ffee00 0%, #ffcc00 100%);
             border-radius: 10%;
-            border: none;
+            // border: none;
             width: 25%;
             .label {
                 color: black;

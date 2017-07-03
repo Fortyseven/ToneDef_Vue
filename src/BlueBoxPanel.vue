@@ -1,24 +1,27 @@
 <template>
     <div id="BlueBoxPanel">
-        <div class="pad-row row1">
-            <DualToneButton freq1="700" freq2="900" name="1" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="700" freq2="1100" name="2" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="900" freq2="1100" name="3" :context="audio_context"></DualToneButton>
+        <div class="pad-row">
+            <ToneButton freq1="2600" freq2="" name="2600hz" :context="audio_context"></ToneButton>
         </div>
-        <div class="pad-row row2">
-            <DualToneButton freq1="700" freq2="1300" name="4" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="900" freq2="1300" name="5" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1100" freq2="1300" name="6" :context="audio_context"></DualToneButton>
+        <div class="pad-row">
+            <ToneButton freq1="700" freq2="900" name="1" :context="audio_context"></ToneButton>
+            <ToneButton freq1="700" freq2="1100" name="2" :context="audio_context"></ToneButton>
+            <ToneButton freq1="900" freq2="1100" name="3" :context="audio_context"></ToneButton>
         </div>
-        <div class="pad-row row3">
-            <DualToneButton freq1="700" freq2="1500" name="7" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="900" freq2="1500" name="8" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1100" freq2="1500" name="9" :context="audio_context"></DualToneButton>
+        <div class="pad-row">
+            <ToneButton freq1="700" freq2="1300" name="4" :context="audio_context"></ToneButton>
+            <ToneButton freq1="900" freq2="1300" name="5" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1100" freq2="1300" name="6" :context="audio_context"></ToneButton>
         </div>
-        <div class="pad-row row4">
-            <DualToneButton freq1="1100" freq2="1700" name="KP" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1300" freq2="1500" name="0" :context="audio_context"></DualToneButton>
-            <DualToneButton freq1="1500" freq2="1700" name="ST" :context="audio_context"></DualToneButton>
+        <div class="pad-row">
+            <ToneButton freq1="700" freq2="1500" name="7" :context="audio_context"></ToneButton>
+            <ToneButton freq1="900" freq2="1500" name="8" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1100" freq2="1500" name="9" :context="audio_context"></ToneButton>
+        </div>
+        <div class="pad-row">
+            <ToneButton freq1="1100" freq2="1700" name="KP" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1300" freq2="1500" name="0" :context="audio_context"></ToneButton>
+            <ToneButton freq1="1500" freq2="1700" name="ST" :context="audio_context"></ToneButton>
         </div>
     </div>
 </template>
@@ -26,7 +29,7 @@
 <!-- --------------------------------------------------- -->
 
 <script>
-import DualToneButton from "./DualToneButton.vue";
+import ToneButton from "./ToneButton.vue";
 
 export default {
     name: "BlueBoxPanel",
@@ -36,7 +39,7 @@ export default {
         }
     },
     components: {
-        DualToneButton
+        ToneButton
     },
     created() {
         window.AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -57,11 +60,11 @@ export default {
 #BlueBoxPanel {
     display: flex;
     flex-direction: column;
-    background: #4289ff;
+    background: #5299ff;
     width: 100%;
     height: 100%;
     font-family: "Bell";    
-    
+
     .pad-row {
         flex: 1 1 auto;
         display: flex;
@@ -70,7 +73,7 @@ export default {
             width: 33%;
             background: linear-gradient(to bottom, #3333FF 0%, #4444FF 100%);
             border-radius: 10%;
-            border: none;
+            border: 4px solid rgba(0,0,0,0.05);
             .label {
                 color: #00FFFF;
             }
