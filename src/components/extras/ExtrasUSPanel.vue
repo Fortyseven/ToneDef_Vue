@@ -1,7 +1,7 @@
 <template>
     <div id="ExtrasUSPanel">
-        <div class="pad-row">
-            <ToneButton freq1="480" freq2="620" duration="500" space="500" name="Busy" :context="audio_context"></ToneButton>
+        <div class="pad-row">            
+            <ToneButton freq1="480" freq2="620" duration="500" space="500" :context="audio_context"><icon name="flag" scale="2.5"></icon> Busy</ToneButton>
         </div>
     </div>
 </template>
@@ -9,6 +9,7 @@
 <!-- ----------------------- -->
 <script>
 import ToneButton from '../ToneButton.vue';
+import Icon from 'vue-awesome';
 
 export default {
     name: "ExtrasUSPanel",
@@ -18,7 +19,7 @@ export default {
         }
     },
     components: {
-        ToneButton
+        ToneButton, Icon
     },
     created() {
         this.audio_context = new AudioContext();

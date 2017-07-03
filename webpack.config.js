@@ -29,14 +29,14 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]?[hash]'
+                    name: '[name].[ext]'
                 }
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+                test: /\.(eot|ttf|woff|woff2|otf)$/,
                 loader: 'file-loader',
                 options: {
                     name: 'assets/fonts/[name].[ext]',
