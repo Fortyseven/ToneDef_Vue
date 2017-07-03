@@ -6,9 +6,9 @@ Vue.use(VueSimpleTouch);
 Vue.use(VueRouter);
 
 // import App from './App.vue'
-import Links from "./Links.vue";
-import DTMFPanel from "./DTMFPanel.vue";
-import BlueBoxPanel from "./BlueBoxPanel.vue";
+import Links from "./components/Links.vue";
+import DTMFPanel from "./components/DTMFPanel.vue";
+import BlueBoxPanel from "./components/BlueBoxPanel.vue";
 
 const routes = [
     { path: "/", component: DTMFPanel },

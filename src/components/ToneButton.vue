@@ -9,7 +9,7 @@
 <!-- --------------------------------------------------- -->
 
 <script>
-import DualTonePlayer from "./DualTonePlayer";
+import DualTonePlayer from "../DualTonePlayer";
 
 export default {
     name: "ToneButton",

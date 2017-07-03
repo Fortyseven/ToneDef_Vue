@@ -30,8 +30,8 @@
 <!-- --------------------------------------------------- -->
 
 <script>
-require('./assets/fonts/BellGothicStd-Black.woff');
-require('./assets/fonts/BellGothicStd-Black.ttf');
+require('../assets/fonts/BellGothicStd-Black.woff');
+require('../assets/fonts/BellGothicStd-Black.ttf');
 
 import ToneButton from "./ToneButton.vue";
 
@@ -57,8 +57,8 @@ export default {
 <style lang="scss">
 @font-face { 
     font-family: 'Bell'; 
-    src: url('assets/fonts/BellGothicStd-Black.woff') format("woff"),
-         url('assets/fonts/BellGothicStd-Black.ttf') format("ttf");
+    src: url('../assets/fonts/BellGothicStd-Black.woff') format("woff"),
+         url('../assets/fonts/BellGothicStd-Black.ttf') format("ttf");
 }
 
 #DTMFPanel {
