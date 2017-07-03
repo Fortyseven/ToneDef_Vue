@@ -61,10 +61,10 @@ var vueSimpleTouch = {
             },
             /* ------------------------------ */
             unbind($el) {
-                $el.removeEventListener('mouseup');
-                $el.removeEventListener('touchend');
-                $el.removeEventListener('mousedown');
-                $el.removeEventListener('touchstart');
+                $el.removeEventListener('mouseup', onPressedEnd);
+                $el.removeEventListener('touchend', onPressedEnd);
+                $el.removeEventListener('mousedown', onPressedStart);
+                $el.removeEventListener('touchstart', onPressedStart);
             }
         });
     }
