@@ -10,11 +10,12 @@
 
 <script>
 import DualTonePlayer from "../DualTonePlayer";
+import DualTonePeriodicPlayer from "../DualTonePeriodicPlayer";
 
 export default {
     name: "ToneButton",
     props: [
-        'freq1', 'freq2', 'duration', 'name', 'context'
+        'freq1', 'freq2', 'duration', 'space', 'name', 'context'
     ],
     data() {
         return {
@@ -33,7 +34,11 @@ export default {
         }
     },
     created() {
-        this.player = new DualTonePlayer(this.context, this.freq1, this.freq2, this.name);
+        if (this.duration) {
+            this.player = new DualTonePeriodicPlayer(this.context, this.freq1, this.freq2, this.duration, this.space, this.name);
+        } else {
+            this.player = new DualTonePlayer(this.context, this.freq1, this.freq2, this.name);
+        }
     }
 }
 </script>
@@ -46,7 +51,7 @@ div .button {
 
     background: white;
 
-    border: 4px solid rgba(0,0,0,0.05);
+    border: 4px solid rgba(0, 0, 0, 0.05);
     margin: 0.45em;
     user-select: none;
     cursor: pointer;
