@@ -51,20 +51,20 @@ export default {
 #BlueBoxPanel {
     display: flex;
     flex-direction: column;
-    background: blue;
+    background: #4289ff;
     width: 100%;
     height: 100%;
-
     .pad-row {
         flex: 1 1 auto;
         display: flex;
 
         .button {
             width: 33%;
-            background: linear-gradient(to bottom, white 0%, darkcyan 10%, black 100%);
+            background: linear-gradient(to bottom, #3333FF 0%, #4444FF 100%);
+            border-radius: 10%;
             border: none;
             .label {
-                color: white !important;
+                color: #00FFFF;
             }
         }
     }

@@ -44,14 +44,14 @@ export default {
 div .button {
     flex: 1 1 auto;
 
-    background: #d5cea6;
-    background: linear-gradient(to bottom, white 0%, #c9c190 10%, gold 100%);
+    background: white;
 
     border: 4px inset gold;
     margin: 0.25em;
     user-select: none;
     cursor: pointer;
     position: relative;
+    box-shadow: 0.2em 0.2em 9px 1px rgba(0, 0, 0, 0.5);
 
     .label {
         position: relative;
@@ -63,8 +63,11 @@ div .button {
         line-height: 0;
     }
 
+    transition: 500ms top, 100ms opacity;
+    position: relative;
     &.pressed {
-        opacity: 0.5;
+        opacity: 0.75;
+        top: 1em;
     }
 }
 </style>

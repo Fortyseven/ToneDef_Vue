@@ -29,10 +29,17 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
+                test: /\.(png|jpg|gif)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]?[hash]'
+                }
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]'
                 }
             }
         ]

@@ -30,6 +30,9 @@
 <!-- --------------------------------------------------- -->
 
 <script>
+
+require('./assets/fonts/BellGothicStd-Black.woff');
+require('./assets/fonts/BellGothicStd-Black.otf');
 import DualToneButton from "./DualToneButton.vue";
 
 export default {
@@ -52,17 +55,36 @@ export default {
 <!-- --------------------------------------------------- -->
 
 <style lang="scss">
+
+        @font-face {
+            font-family: 'Bell';
+            src: url('./assets/fonts/BellGothicStd-Black.woff') format("woff"), 
+                 url('./assets/fonts/BellGothicStd-Black.otf') format('truetype');
+        }
+
 #DTMFPanel {
     display: flex;
+    padding: 1%;
     flex-direction: column;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(#444));
-    background-image: -webkit-linear-gradient(top, black, #444);
-    image: -moz-linear -gradient(top, black, #444);
-    background-image: linear-gradient(to bottom, black, #444);
-    height: 100%;
+    height: 100%; // background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(#444));
+    // background-image: -webkit-linear-gradient(top, black, #444);
+    // image: -moz-linear -gradient(top, black, #444);
+    // background-image: linear-gradient(to bottom, black, #444);
+    background: brown;
+
     .pad-row {
         flex: 0 0 25%;
         display: flex;
+
+        .button {
+            background: linear-gradient(to bottom, #ffee00 0%, #ffcc00 100%);
+            border-radius: 10%;
+            border: none;
+            width: 25%;
+            .label {
+                color: black;
+            }
+        }
     }
 }
-</style>
+</style> 
