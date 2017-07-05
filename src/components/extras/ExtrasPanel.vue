@@ -11,8 +11,8 @@
 
 <!-- ----------------------- -->
 <script>
-require("../assets/images/flags/1x1/us.svg");
-require("../assets/images/flags/4x3/us.svg");
+require("../../assets/images/flags/1x1/us.svg");
+require("../../assets/images/flags/4x3/us.svg");
 
 import Icon from 'vue-awesome';
 
@@ -56,10 +56,10 @@ export default {
 }
 
 .flag-icon-us {
-  background-image: url(../assets/images/flags/4x3/us.svg);
+  background-image: url(../../assets/images/flags/4x3/us.svg);
 }
 .flag-icon-us.flag-icon-squared {
-  background-image: url(../assets/images/flags/1x1/us.svg);
+  background-image: url(../../assets/images/flags/1x1/us.svg);
 }
 
 

@@ -1,7 +1,21 @@
 <template>
     <div id="ExtrasUSPanel">
         <div class="pad-row">            
-            <ToneButton freq1="480" freq2="620" duration="500" space="500" :context="audio_context"><icon name="flag" scale="2.5"></icon> Busy</ToneButton>
+            <ToneSequenceButton name="Busy" :context="audio_context">
+                <SequenceNode freqs="480,620" duration="500"></SequenceNode>
+                <SequenceNode freqs="0" duration="500"></SequenceNode>
+            </ToneSequenceButton>
+            <ToneSequenceButton name="Off Hook" :context="audio_context">
+                <SequenceNode freqs="1440,2060,2450,2600" duration="100"></SequenceNode>
+                <SequenceNode freqs="0" duration="100"></SequenceNode>
+            </ToneSequenceButton>
+            <ToneButton freqs="350,440" :context="audio_context">Dial Tone</ToneButton>
+        </div>
+        <div class='pad-row'>
+            <ToneSequenceButton name="Ringback" :context="audio_context">
+                <SequenceNode freqs="440, 480" duration="2000"></SequenceNode>
+                <SequenceNode freqs="0" duration="4000"></SequenceNode>
+            </ToneSequenceButton>            
         </div>
     </div>
 </template>
@@ -9,6 +23,7 @@
 <!-- ----------------------- -->
 <script>
 import ToneButton from '../ToneButton.vue';
+import ToneSequenceButton from '../ToneSequenceButton.vue';
 import Icon from 'vue-awesome';
 
 export default {
@@ -19,9 +34,10 @@ export default {
         }
     },
     components: {
-        ToneButton, Icon
+        ToneButton, ToneSequenceButton, Icon
     },
     created() {
+        window.AudioContext = window.AudioContext || window.webkitAudioContext;
         this.audio_context = new AudioContext();
     }
 };

@@ -9,13 +9,13 @@
 <!-- --------------------------------------------------- -->
 
 <script>
-import DualTonePlayer from "../DualTonePlayer";
-import DualTonePeriodicPlayer from "../DualTonePeriodicPlayer";
+import MultiTonePlayer from "../audio/MultiTonePlayer";
+import DualTonePeriodicPlayer from "../audio/DualTonePeriodicPlayer";
 
 export default {
     name: "ToneButton",
     props: [
-        'freq1', 'freq2', 'duration', 'space', 'name', 'context'
+        'freqs', 'duration', 'space', 'name', 'context'
     ],
     data() {
         return {
@@ -34,10 +34,12 @@ export default {
         }
     },
     created() {
+        var freqs = this.freqs.split(',');
+        console.log(freqs);
         if (this.duration) {
-            this.player = new DualTonePeriodicPlayer(this.context, this.freq1, this.freq2, this.duration, this.space, this.name);
+            //this.player = new DualTonePeriodicPlayer(this.context, this.freq1, this.freq2, this.duration, this.space, this.name);
         } else {
-            this.player = new DualTonePlayer(this.context, this.freq1, this.freq2, this.name);
+            this.player = new MultiTonePlayer(this.context, freqs, this.name);
         }
     }
 }

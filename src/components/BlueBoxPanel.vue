@@ -1,27 +1,27 @@
 <template>
     <div class="tone-panel">
         <div class="tone-panel-row">
-            <ToneButton freq1="2600" freq2="" :context="audio_context">2600hz</ToneButton>
+            <ToneButton freqs="2600" :context="audio_context">2600hz</ToneButton>
         </div>
         <div class="tone-panel-row">
-            <ToneButton freq1="700" freq2="900" :context="audio_context">1</ToneButton>
-            <ToneButton freq1="700" freq2="1100" :context="audio_context">2</ToneButton>
-            <ToneButton freq1="900" freq2="1100" :context="audio_context">3</ToneButton>
+            <ToneButton freqs="700,900" :context="audio_context">1</ToneButton>
+            <ToneButton freqs="700,1100" :context="audio_context">2</ToneButton>
+            <ToneButton freqs="900,1100" :context="audio_context">3</ToneButton>
         </div>
         <div class="tone-panel-row">
-            <ToneButton freq1="700" freq2="1300" :context="audio_context">4</ToneButton>
-            <ToneButton freq1="900" freq2="1300" :context="audio_context">5</ToneButton>
-            <ToneButton freq1="1100" freq2="1300" :context="audio_context">6</ToneButton>
+            <ToneButton freqs="700,1300" :context="audio_context">4</ToneButton>
+            <ToneButton freqs="900,1300" :context="audio_context">5</ToneButton>
+            <ToneButton freqs="1100,1300" :context="audio_context">6</ToneButton>
         </div>
         <div class="tone-panel-row">
-            <ToneButton freq1="700" freq2="1500" :context="audio_context">7</ToneButton>
-            <ToneButton freq1="900" freq2="1500" :context="audio_context">8</ToneButton>
-            <ToneButton freq1="1100" freq2="1500" :context="audio_context">9</ToneButton>
+            <ToneButton freqs="700,1500" :context="audio_context">7</ToneButton>
+            <ToneButton freqs="900,1500" :context="audio_context">8</ToneButton>
+            <ToneButton freqs="1100,1500" :context="audio_context">9</ToneButton>
         </div>
         <div class="tone-panel-row">
-            <ToneButton freq1="1100" freq2="1700" :context="audio_context">KP</ToneButton>
-            <ToneButton freq1="1300" freq2="1500" :context="audio_context">0</ToneButton>
-            <ToneButton freq1="1500" freq2="1700" :context="audio_context">ST</ToneButton>
+            <ToneButton freqs="1100,1700" :context="audio_context">KP</ToneButton>
+            <ToneButton freqs="1300,1500" :context="audio_context">0</ToneButton>
+            <ToneButton freqs="1500,1700" :context="audio_context">ST</ToneButton>
         </div>
     </div>
 </template>

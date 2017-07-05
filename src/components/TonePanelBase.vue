@@ -20,12 +20,10 @@ export default Vue.extend({
         ToneButton
     },
     created() {
-        console.warn("created");
         window.AudioContext = window.AudioContext || window.webkitAudioContext;
         this.audio_context = new AudioContext();
     },
     destroyed() {
-        console.warn("destroyed");
         this.audio_context.close();
     }
 });
