@@ -1,10 +1,12 @@
 <!-- ##### TONE SEQUENCE BUTTON ##### -->
 
 <template>
-    <div v-touch="[onPressStart, onPressStop]" class="button">{{ name }}</div>
+    <div v-touch="[onPressStart, onPressStop]" class="button tone-sequence-button" :class="{ pressed : isPlaying }">
+        <div class="label">{{ name }}</div>
+    </div>
 </template>
 
-
+<!-- ----------------------- -->
 <script>
 import ToneSequence from '../audio/ToneSequence';
 
@@ -16,6 +18,7 @@ export default {
     data() {
         return {
             sequence: null,
+            isPlaying: false
         }
     },
     created() {
@@ -24,8 +27,8 @@ export default {
         for (var i in this.$slots.default) {
             var node_el = this.$slots.default[i];
             if (node_el && node_el.data) {
-                var opts = node_el.data.attrs;                
-                opts.freqs = opts.freqs.split(',');                
+                var opts = node_el.data.attrs;
+                opts.freqs = opts.freqs.split(',');
                 this.sequence.addSequenceNode(opts);
             }
         }
@@ -33,20 +36,21 @@ export default {
     methods: {
         onPressStart() {
             this.sequence.play();
+            this.isPlaying = true;
         },
         onPressStop() {
+            this.isPlaying = false;
             this.sequence.stop();
         }
     }
 };
 </script>
 
+<!-- ----------------------- -->
 <style lang="scss" scoped>
 div .button {
     flex: 1 1 auto;
-
     background: white;
-
     border: 4px solid rgba(0, 0, 0, 0.05);
     margin: 0.45em;
     user-select: none;
@@ -59,12 +63,13 @@ div .button {
         bottom: -50%;
         color: black;
         text-align: center;
-        font-size: 36pt;
+        font-size: 12pt;
         font-weight: bold;
         line-height: 0;
     }
 
-    transition: 500ms top, 100ms opacity;
+    transition: 500ms top,
+    100ms opacity;
     position: relative;
     &.pressed {
         opacity: 0.75;
