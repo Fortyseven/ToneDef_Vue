@@ -61,6 +61,9 @@ export default TonePanelBase.extend({
             background: linear-gradient(to bottom, #ffee00 0%, #ffcc00 100%);
             border-radius: 10%;
             width: 25%;
+            .label {
+                color: black;
+            }
         }
     }
 }
