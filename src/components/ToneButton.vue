@@ -12,7 +12,7 @@
 
 <script>
 import MultiTonePlayer from "../audio/MultiTonePlayer";
-import DualTonePeriodicPlayer from "../audio/DualTonePeriodicPlayer";
+// import DualTonePeriodicPlayer from "../audio/DualTonePeriodicPlayer";
 
 export default {
     name: "ToneButton",
@@ -37,12 +37,8 @@ export default {
     },
     created() {
         var freqs = this.freqs.split(',');
-        console.log(freqs);
-        if (this.duration) {
-            //this.player = new DualTonePeriodicPlayer(this.context, this.freq1, this.freq2, this.duration, this.space, this.name);
-        } else {
-            this.player = new MultiTonePlayer(this.context, freqs, this.name);
-        }
+        // console.log(freqs);
+        this.player = new MultiTonePlayer(this.context, freqs, this.name);
     }
 }
 </script>
