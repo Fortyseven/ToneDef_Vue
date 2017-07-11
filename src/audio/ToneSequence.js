@@ -7,10 +7,11 @@ const SequenceState = {
 
 export default class ToneSequence {
 
-    constructor(audio_context) {
+    constructor(audio_context, loop = true) {
         this.audio_context = audio_context;
         this.sequences = [];
         this.timer = null;
+        this.loop = loop;
         this.reset();
     }
 
@@ -40,6 +41,10 @@ export default class ToneSequence {
                 this.current_sequence++;
                 if (this.current_sequence >= this.sequences.length) {
                     this.current_sequence = 0;
+                    if (!this.loop) {
+                        this.stop();
+                        return;
+                    }
                 }
 
                 this.sequences[this.current_sequence].osc.startPlaying();
