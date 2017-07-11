@@ -7,7 +7,7 @@ const SequenceState = {
 
 export default class ToneSequence {
 
-    constructor(audio_context, loop = true) {
+    constructor(audio_context, loop) {
         this.audio_context = audio_context;
         this.sequences = [];
         this.timer = null;
@@ -66,7 +66,10 @@ export default class ToneSequence {
         if (this.timer) {
             clearTimeout(this.timer);
         }
-        this.sequences[this.current_sequence].osc.stopPlaying();
+        let seq = this.sequences[this.current_sequence];
+        if (seq) {
+            seq.osc.stopPlaying();
+        }
         this.reset();
     }
 

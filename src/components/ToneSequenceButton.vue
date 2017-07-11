@@ -12,9 +12,14 @@ import ToneSequence from '../audio/ToneSequence';
 
 export default {
     name: 'ToneSequenceButton',
-    props: [
-        'context', 'name'
-    ],
+    props: {
+        context: AudioContext, 
+        name: String,
+        loop: {
+            type: Boolean,
+            default: true
+        }
+    },
     data() {
         return {
             sequence: null,
@@ -22,7 +27,7 @@ export default {
         }
     },
     created() {
-        this.sequence = new ToneSequence(this.context);
+        this.sequence = new ToneSequence(this.context, this.loop);
 
         for (var i in this.$slots.default) {
             var node_el = this.$slots.default[i];
