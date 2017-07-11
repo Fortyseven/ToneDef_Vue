@@ -37,7 +37,6 @@ export default class ToneSequence {
     play() {
         switch (this.current_sequence_state) {
             case SequenceState.SPACE:
-                console.info('space');
                 this.current_sequence++;
                 if (this.current_sequence >= this.sequences.length) {
                     this.current_sequence = 0;
@@ -53,7 +52,6 @@ export default class ToneSequence {
                 this.timer = setTimeout(this.play.bind(this), this.sequences[this.current_sequence].duration);
                 break;
             case SequenceState.MARK:
-                console.info('mark');
                 this.sequences[this.current_sequence].osc.stopPlaying();
                 this.current_sequence_state = SequenceState.SPACE;
                 this.timer = setTimeout(this.play.bind(this), this.sequences[this.current_sequence].space);

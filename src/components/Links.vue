@@ -1,7 +1,8 @@
 <template>
     <div class="links">
         <router-link to="/dtmf">DTMF</router-link> |
-        <router-link to="/bluebox">BlueBox</router-link> |
+        <router-link to="/bluebox">Blue Box</router-link> |
+        <router-link to="/redbox">Red Box</router-link> |
         <router-link to="/extras">Extras</router-link>
     </div>
 </template>

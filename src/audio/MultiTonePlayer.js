@@ -11,7 +11,7 @@ export default class MultiTonePlayer {
                 this.oscillators.push({ freq: f, osc: null });
             }
         }
-        console.log("Created " + this.oscillators.length + " oscillators");
+        //console.log("Created " + this.oscillators.length + " oscillators");
     }
 
     startPlaying() {
