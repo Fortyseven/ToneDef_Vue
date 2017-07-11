@@ -1,3 +1,5 @@
+<!-- ##### DTMF PANEL ##### -->
+
 <template>
     <div id="DTMFPanel" class="tone-panel">
         <div class="tone-panel-row">

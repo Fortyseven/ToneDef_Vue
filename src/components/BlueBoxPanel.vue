@@ -1,3 +1,5 @@
+<!-- ##### BLUE BOX PANEL ##### -->
+
 <template>
     <div class="tone-panel">
         <div class="tone-panel-row">

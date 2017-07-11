@@ -1,3 +1,5 @@
+<!-- ##### EXTRAS US PANEL ##### -->
+
 <template>
     <div id="ExtrasUSPanel">
         <div class="pad-row">            

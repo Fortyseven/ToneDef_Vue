@@ -1,3 +1,5 @@
+<!-- ##### TONE SEQUENCE BUTTON ##### -->
+
 <template>
     <div v-touch="[onPressStart, onPressStop]" class="button">{{ name }}</div>
 </template>

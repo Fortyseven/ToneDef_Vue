@@ -1,3 +1,5 @@
+<!-- ##### TONE BUTTON ##### -->
+
 <template>
     <div class="button" :class="{ pressed : isPlaying }" v-touch="[playerStart, playerStop]">
         <div class="label">
