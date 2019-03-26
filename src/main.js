@@ -1,8 +1,8 @@
-require('./assets/style/style.scss');
+require("./assets/style/style.scss");
 
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import VueSimpleTouch from './utils/vue-simple-touch.js';
+import Vue from "vue";
+import VueRouter from "vue-router";
+import VueSimpleTouch from "./utils/vue-simple-touch.js";
 
 Vue.use(VueSimpleTouch);
 Vue.use(VueRouter);
@@ -32,7 +32,6 @@ const app_main = new Vue({
         Links
     }
 }).$mount("#Main");
-
 
 // new Vue({
 //   el: '#app',

@@ -47,8 +47,8 @@
 
 <!-- ----------------------- -->
 <style lang="scss">
-@font-face { 
-    font-family: 'Bell'; 
+@font-face {
+    font-family: 'Bell';
     src: url('../../assets/fonts/BellGothicStd-Black.woff') format("woff"),
          url('../../assets/fonts/BellGothicStd-Black.ttf') format("ttf");
 }
