@@ -21,10 +21,9 @@ body,
     flex-direction: column;
 }
 
-
 /** DESKTOP **/
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
     body {
         width: 40vw;
         min-width: 512px;

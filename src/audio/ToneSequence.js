@@ -1,4 +1,6 @@
-import MultiTonePlayer from './MultiTonePlayer';
+"use strict";
+
+import MultiTonePlayer from "./MultiTonePlayer";
 
 const SequenceState = {
     MARK: 0,
@@ -6,7 +8,6 @@ const SequenceState = {
 };
 
 export default class ToneSequence {
-
     constructor(audio_context, loop) {
         this.audio_context = audio_context;
         this.sequences = [];
@@ -17,7 +18,7 @@ export default class ToneSequence {
 
     /**
      * Adds another node to the tone sequence list
-     * @param {*} options 
+     * @param {*} options
      */
     addSequenceNode(options) {
         var opt = {
@@ -60,7 +61,7 @@ export default class ToneSequence {
     }
 
     /**
-     * Stop playing the sequence, clear the callback timer, and reset 
+     * Stop playing the sequence, clear the callback timer, and reset
      */
     stop() {
         if (this.timer) {
@@ -74,7 +75,7 @@ export default class ToneSequence {
     }
 
     /**
-     * 
+     *
      */
     reset() {
         this.current_sequence = -1;

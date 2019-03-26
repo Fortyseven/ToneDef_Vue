@@ -1,5 +1,5 @@
+"use strict";
 export default class MultiTonePlayer {
-
     constructor(context, ...freqs) {
         this.name = name;
         this.context = context;
@@ -11,7 +11,6 @@ export default class MultiTonePlayer {
                 this.oscillators.push({ freq: f, osc: null });
             }
         }
-        //console.log("Created " + this.oscillators.length + " oscillators");
     }
 
     startPlaying() {
@@ -29,7 +28,7 @@ export default class MultiTonePlayer {
 
     createOsc(freq) {
         var osc = this.context.createOscillator();
-        osc.type = 'sine';
+        osc.type = "sine";
         osc.frequency.value = freq;
         osc.connect(this.context.destination);
         return osc;
