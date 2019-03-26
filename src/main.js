@@ -14,6 +14,7 @@ import BlueBoxPanel from "./components/BlueBoxPanel.vue";
 import RedBoxPanel from "./components/RedBoxPanel.vue";
 import ExtrasPanel from "./components/extras/ExtrasPanel.vue";
 import ExtrasUSPanel from "./components/extras/ExtrasUSPanel.vue";
+import ExtrasRadioPanel from "./components/extras/ExtrasRadioPanel.vue";
 
 const routes = [
     { path: "/", component: DTMFPanel },
@@ -21,7 +22,8 @@ const routes = [
     { path: "/bluebox", component: BlueBoxPanel },
     { path: "/redbox", component: RedBoxPanel },
     { path: "/extras", component: ExtrasPanel },
-    { path: "/extras/us", component: ExtrasUSPanel }
+    { path: "/extras/us", component: ExtrasUSPanel },
+    { path: "/extras/radio", component: ExtrasRadioPanel }
 ];
 
 const router = new VueRouter({ routes });

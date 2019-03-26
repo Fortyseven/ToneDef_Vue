@@ -4,6 +4,8 @@
             <li>
                 <router-link to="/extras/us" tag="button">
                     <div class="flag-icon flag-icon-us"></div> US</router-link>
+                <router-link to="/extras/radio" tag="button">
+                    <div class=""></div> Radio</router-link>
             </li>
         </ul>
     </div>
